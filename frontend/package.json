@@ -11,7 +11,7 @@
     "build:pc": "turbo run build --filter=@mhxy/pc"
   },
   "devDependencies": {
-    "turbo": "^2.3.3"
+    "turbo": "^2.7.2"
   },
   "packageManager": "pnpm@9.15.1"
 }
