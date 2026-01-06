@@ -1,5 +1,5 @@
-import { AxiosInstance } from 'axios';
-import { ApiResponse, Category, Tag, GameServer } from '@mhxy/shared/types';
+import type { AxiosInstance } from 'axios';
+import type { ApiResponse, Category, Tag, GameServer } from '@mhxy/shared/types';
 
 export function createCommonService(client: AxiosInstance) {
   return {

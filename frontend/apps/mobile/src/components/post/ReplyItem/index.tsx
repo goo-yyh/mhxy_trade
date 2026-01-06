@@ -1,5 +1,5 @@
 import { Card } from 'antd-mobile';
-import { PostReply } from '@mhxy/shared/types';
+import type { PostReply } from '@mhxy/shared/types';
 import { formatDateTime } from '@mhxy/shared/utils';
 
 export function ReplyItem({ reply }: { reply: PostReply }) {

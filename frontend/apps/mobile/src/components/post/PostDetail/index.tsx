@@ -1,5 +1,5 @@
 import { Card, Tag } from 'antd-mobile';
-import { PostDetail as PostDetailType } from '@mhxy/shared/types';
+import type { PostDetail as PostDetailType } from '@mhxy/shared/types';
 import { formatPrice } from '@mhxy/shared/utils';
 
 export function PostDetail({ post }: { post: PostDetailType }) {

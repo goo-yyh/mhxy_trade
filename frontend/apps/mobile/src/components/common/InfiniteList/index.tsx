@@ -1,5 +1,5 @@
 import { InfiniteScroll } from 'antd-mobile';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 interface InfiniteListProps {
   loadMore: () => Promise<void>;

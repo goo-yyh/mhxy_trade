@@ -1,5 +1,5 @@
 import { List } from 'antd-mobile';
-import { Notification } from '@mhxy/shared/types';
+import type { Notification } from '@mhxy/shared/types';
 import { NotificationItem } from '../NotificationItem';
 
 export function NotificationList({ items }: { items: Notification[] }) {

@@ -1,5 +1,5 @@
-import { AxiosInstance } from 'axios';
-import { ApiResponse, PaginatedData, Notification, UnreadCount } from '@mhxy/shared/types';
+import type { AxiosInstance } from 'axios';
+import type { ApiResponse, PaginatedData, Notification, UnreadCount } from '@mhxy/shared/types';
 
 export function createNotificationService(client: AxiosInstance) {
   return {

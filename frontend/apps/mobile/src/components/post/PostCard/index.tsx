@@ -1,5 +1,5 @@
 import { Card, Tag } from 'antd-mobile';
-import { PostListItem } from '@mhxy/shared/types';
+import type { PostListItem } from '@mhxy/shared/types';
 import { formatPrice, formatDate } from '@mhxy/shared/utils';
 
 interface PostCardProps {

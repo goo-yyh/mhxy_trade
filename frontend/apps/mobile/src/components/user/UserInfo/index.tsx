@@ -1,5 +1,5 @@
 import { Card } from 'antd-mobile';
-import { User } from '@mhxy/shared/types';
+import type { User } from '@mhxy/shared/types';
 import { UserAvatar } from '../UserAvatar';
 
 export function UserInfo({ user }: { user: User }) {

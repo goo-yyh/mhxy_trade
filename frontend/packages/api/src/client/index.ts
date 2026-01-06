@@ -1,5 +1,6 @@
-import axios, { AxiosError, AxiosInstance } from 'axios';
-import { ApiResponse } from '@mhxy/shared/types';
+import axios from 'axios';
+import type { AxiosError, AxiosInstance } from 'axios';
+import type { ApiResponse } from '@mhxy/shared/types';
 
 export interface ApiClientConfig {
   baseURL: string;

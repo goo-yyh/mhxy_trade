@@ -1,5 +1,5 @@
 import { PullToRefresh } from 'antd-mobile';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 interface PullRefreshProps {
   onRefresh: () => Promise<void>;

@@ -1,5 +1,5 @@
-import { AxiosInstance } from 'axios';
-import { ApiResponse, User } from '@mhxy/shared/types';
+import type { AxiosInstance } from 'axios';
+import type { ApiResponse, User } from '@mhxy/shared/types';
 
 export interface LoginResponse {
   token: string;

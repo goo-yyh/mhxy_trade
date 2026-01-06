@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { postService } from '../../services';
 import { PostList } from '../../components/post/PostList';
 import { Header } from '../../components/common/Header';
+import type { PostFilterParams } from '@mhxy/shared/types';
 
-const sortOptions = [
+const sortOptions: Array<{ key: NonNullable<PostFilterParams['sort']>; title: string }> = [
   { key: 'latest', title: '最新' },
   { key: 'likes', title: '点赞' },
   { key: 'price_asc', title: '价格↑' },
@@ -15,10 +16,13 @@ const sortOptions = [
 
 export function Search() {
   const [keyword, setKeyword] = useState('');
-  const [sort, setSort] = useState('latest');
+  const [sort, setSort] = useState<PostFilterParams['sort']>('latest');
   const navigate = useNavigate();
 
-  const queryParams = useMemo(() => ({ keyword, sort, page: 1, pageSize: 20 }), [keyword, sort]);
+  const queryParams = useMemo<PostFilterParams>(
+    () => ({ keyword, sort, page: 1, pageSize: 20 }),
+    [keyword, sort]
+  );
   const { data } = useQuery({
     queryKey: ['posts', 'search', queryParams],
     queryFn: () => postService.getList(queryParams),

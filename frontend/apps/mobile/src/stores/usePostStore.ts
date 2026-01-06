@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { PostFilterParams } from '@mhxy/shared/types';
+import type { PostFilterParams } from '@mhxy/shared/types';
 
 interface PostState {
   filter: PostFilterParams;

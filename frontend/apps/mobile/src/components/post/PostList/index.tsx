@@ -1,5 +1,5 @@
 import { List } from 'antd-mobile';
-import { PostListItem } from '@mhxy/shared/types';
+import type { PostListItem } from '@mhxy/shared/types';
 import { PostCard } from '../PostCard';
 
 interface PostListProps {

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { User } from '@mhxy/shared/types';
+import type { User } from '@mhxy/shared/types';
 import { getToken, setToken, clearToken } from '@mhxy/shared/utils';
 
 interface AuthState {

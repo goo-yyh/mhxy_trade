@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { Header } from '../../components/common/Header';
 import { postService } from '../../services';
 import { POST_TYPES } from '@mhxy/shared/constants';
+import type { PostType } from '@mhxy/shared/types';
 
 interface PostFormValues {
   title: string;
-  type: string | string[];
+  type: PostType | PostType[];
   category: string;
   gameServer: string;
   price: string | number;
@@ -22,7 +23,7 @@ export function PostCreate() {
   const handleSubmit = async (values: PostFormValues) => {
     setSubmitting(true);
     try {
-      const typeValue = Array.isArray(values.type) ? values.type[0] : values.type;
+      const typeValue = (Array.isArray(values.type) ? values.type[0] : values.type) as PostType;
       await postService.create({
         title: values.title,
         type: typeValue,

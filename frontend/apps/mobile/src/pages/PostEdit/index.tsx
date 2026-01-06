@@ -5,10 +5,11 @@ import { Header } from '../../components/common/Header';
 import { postService } from '../../services';
 import { useQuery } from '@tanstack/react-query';
 import { POST_TYPES } from '@mhxy/shared/constants';
+import type { PostType } from '@mhxy/shared/types';
 
 interface PostFormValues {
   title: string;
-  type: string | string[];
+  type: PostType | PostType[];
   category: string;
   gameServer: string;
   price: string | number;
@@ -45,7 +46,7 @@ export function PostEdit() {
     if (!Number.isFinite(postId)) return;
     setSubmitting(true);
     try {
-      const typeValue = Array.isArray(values.type) ? values.type[0] : values.type;
+      const typeValue = (Array.isArray(values.type) ? values.type[0] : values.type) as PostType;
       await postService.update(postId, {
         title: values.title,
         type: typeValue,
