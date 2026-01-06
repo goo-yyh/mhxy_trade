@@ -34,7 +34,7 @@ export function Search() {
     <div>
       <Header title="搜索" back />
       <SearchBar value={keyword} onChange={setKeyword} placeholder="搜索装备/账号/召唤兽" />
-      <CapsuleTabs activeKey={sort} onChange={setSort}>
+      <CapsuleTabs activeKey={sort} onChange={(key) => setSort(key as PostFilterParams['sort'])}>
         {sortOptions.map((option) => (
           <CapsuleTabs.Tab key={option.key} title={option.title} />
         ))}
