@@ -1,0 +1,13 @@
+@import 'antd/dist/reset.css';
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'PingFang SC', 'Microsoft Yahei', sans-serif;
+}

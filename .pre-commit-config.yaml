@@ -67,3 +67,28 @@ repos:
         language: system
         files: ^backend/.*\.rs$
         pass_filenames: false
+
+      # Frontend hooks
+      - id: eslint
+        name: eslint
+        description: Lint frontend code with ESLint
+        entry: bash -c 'cd frontend && pnpm exec eslint --max-warnings 0'
+        language: system
+        files: ^frontend/.*\.(js|jsx|ts|tsx)$
+        pass_filenames: false
+
+      - id: prettier
+        name: prettier
+        description: Format frontend code with Prettier
+        entry: bash -c 'cd frontend && pnpm exec prettier --check "**/*.{js,jsx,ts,tsx,json,css,md}"'
+        language: system
+        files: ^frontend/.*\.(js|jsx|ts|tsx|json|css|md)$
+        pass_filenames: false
+
+      - id: typescript-check
+        name: TypeScript type check
+        description: Check TypeScript types
+        entry: bash -c 'cd frontend && pnpm exec turbo run typecheck'
+        language: system
+        files: ^frontend/.*\.(ts|tsx)$
+        pass_filenames: false

@@ -1,0 +1,7 @@
+{
+  "extends": "@mhxy/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["src"]
+}

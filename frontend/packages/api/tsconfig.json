@@ -1,0 +1,11 @@
+{
+  "extends": "@mhxy/typescript-config/library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@mhxy/shared": ["../shared/src/index.ts"],
+      "@mhxy/shared/*": ["../shared/src/*"]
+    }
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@mhxy/manage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mhxy/api": "workspace:*",
+    "@mhxy/shared": "workspace:*",
+    "@tanstack/react-query": "^5.90.12",
+    "@ant-design/icons": "^6.0.0",
+    "antd": "^5.26.7",
+    "next": "16.0.10",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@mhxy/eslint-config": "workspace:*",
+    "@mhxy/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

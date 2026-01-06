@@ -1,8 +1,11 @@
+use anyhow::Result;
+use axum::{routing::get, Router};
+use tokio::net::TcpListener;
 use tracing::{info, level_filters::LevelFilter};
 use tracing_subscriber::{fmt::Layer, layer::SubscriberExt, util::SubscriberInitExt, Layer as _};
 
 #[tokio::main]
-async fn main() {
+async fn main() -> Result<()> {
     let layer = Layer::new()
         .with_target(true) // 显示日志属于哪个模块/文件名
         .with_line_number(true) // 显示源代码行号
@@ -11,7 +14,15 @@ async fn main() {
         .with_filter(LevelFilter::INFO); // 设置日志级别为 INFO
     tracing_subscriber::registry().with(layer).init();
 
-    info!("Hello, world!");
+    // build our application with a single route
+    let app = Router::new().route("/", get(|| async { "Hello, World!" }));
+    let addr = format!("0.0.0.0:{}", 3000);
+    // run our app with hyper, listening globally on port 3000
+    let listener = TcpListener::bind(&addr).await?;
+    info!("listening on {}", addr);
+    axum::serve(listener, app).await?;
+
+    Ok(())
 }
 
 #[cfg(test)]

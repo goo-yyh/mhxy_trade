@@ -1,17 +1,28 @@
 {
   "name": "mhxy-frontend",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "dev:mobile": "turbo run dev --filter=@mhxy/mobile",
     "dev:pc": "turbo run dev --filter=@mhxy/pc",
     "build:mobile": "turbo run build --filter=@mhxy/mobile",
     "build:pc": "turbo run build --filter=@mhxy/pc"
   },
   "devDependencies": {
-    "turbo": "^2.3.3"
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^16.2.0",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript-eslint": "^8.22.0"
   },
   "packageManager": "pnpm@9.15.1"
 }
