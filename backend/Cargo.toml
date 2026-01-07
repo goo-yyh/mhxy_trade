@@ -15,7 +15,7 @@ axum = { version = "0.8.7", features = [
   "multipart",
   "macros",
 ] }
-axum-extra = { version = "0.12.2", features = ["typed-header"] }
+axum-extra = { version = "0.12.5", features = ["typed-header"] }
 chrono = { version = "0.4.38", features = ["serde"] }
 reqwest = { version = "0.13.1", default-features = false, features = [
   "json",
@@ -23,7 +23,7 @@ reqwest = { version = "0.13.1", default-features = false, features = [
   "stream",
 ] }
 serde = { version = "1.0.210", features = ["derive"] }
-serde_json = "1.0.128"
+serde_json = "1.0.149"
 serde_yaml = "0.9.34"
 sqlx = { version = "0.8.2", features = [
   "chrono",
@@ -32,7 +32,7 @@ sqlx = { version = "0.8.2", features = [
   "tls-rustls",
 ] }
 thiserror = "2.0.17"
-tokio = { version = "1.48.0", features = ["rt", "rt-multi-thread", "macros"] }
+tokio = { version = "1.49.0", features = ["rt", "rt-multi-thread", "macros"] }
 tower = "0.5.1"
 tower-http = { version = "0.6.1", features = [
   "compression-full",
