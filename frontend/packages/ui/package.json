@@ -13,10 +13,10 @@
     "./components/*": "./src/components/*.tsx"
   },
   "dependencies": {
-    "react": "^19.2.0"
+    "react": "^19.2.3"
   },
   "devDependencies": {
     "@mhxy/typescript-config": "workspace:*",
-    "@types/react": "^19.2.5"
+    "@types/react": "^19.2.8"
   }
 }
